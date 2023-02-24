@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
 import { SequelizeModule } from "@nestjs/sequelize";
-import { EducationalBlocksModule } from "./educational-blocks/educational-blocks.module";
 import { ConfigModule } from "@nestjs/config";
-import { EducationalBlock } from "./educational-blocks/educational-blocks.model";
+import { EducationalBlockModule } from "./educational-block/educational-block.module";
+import { EducationalBlock } from "./educational-block/entities/educational-block.entity";
 
 @Module({
   imports: [
@@ -19,7 +19,7 @@ import { EducationalBlock } from "./educational-blocks/educational-blocks.model"
       models: [EducationalBlock],
       autoLoadModels: true,
     }),
-    EducationalBlocksModule,
+    EducationalBlockModule,
   ],
 })
 export class AppModule {}

@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
-import { SequelizeModule } from "@nestjs/sequelize";
 import { ConfigModule } from "@nestjs/config";
 import { EducationalBlockModule } from "./educational-block/educational-block.module";
 import { EducationalBlock } from "./educational-block/entities/educational-block.entity";
+import { SequelizeModule } from '@nestjs/sequelize';
 
 @Module({
   imports: [
